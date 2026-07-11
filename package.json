@@ -9,7 +9,7 @@
     "dev:server": "nodemon server/index.js",
     "dev:client": "vite",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "build": "vite build",
+    "build": "prisma db push && prisma generate && vite build",
     "preview": "vite preview",
     "postinstall": "prisma generate",
     "predeploy": "npm run build",
