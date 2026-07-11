@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/pos-wedang-jahe1/', // <-- Tambahkan baris ini agar path asset benar di GitHub Pages
+  // Baris base dihapus karena Vercel tidak butuh sub-folder
   server: {
     port: 3000,
     proxy: {
