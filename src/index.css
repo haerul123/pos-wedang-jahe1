@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-stone-950 text-stone-100 font-sans antialiased overflow-x-hidden;
+  }
+}
+
+/* Glassmorphism Styles */
+.glass {
+  background: rgba(43, 27, 21, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(239, 190, 144, 0.1);
+}
+
+.glass-light {
+  background: rgba(251, 238, 224, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(251, 238, 224, 0.05);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(43, 27, 21, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(207, 96, 39, 0.4);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(207, 96, 39, 0.6);
+}
+
+/* Micro-animations */
+.hover-scale {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.active-scale:active {
+  transform: scale(0.98);
+}
