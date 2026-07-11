@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "POS & Backoffice CMS SUJAMERA",
   "main": "server/index.js",
+  "homepage": "https://haerul123.github.io/pos-wedang-jahe1/",
   "type": "module",
   "scripts": {
     "dev:server": "nodemon server/index.js",
@@ -10,7 +11,9 @@
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "vite build",
     "preview": "vite preview",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@prisma/client": "^5.16.1",
@@ -27,6 +30,7 @@
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.19",
     "concurrently": "^8.2.2",
+    "gh-pages": "^6.3.0",
     "nodemon": "^3.1.4",
     "postcss": "^8.4.38",
     "prisma": "^5.16.1",
